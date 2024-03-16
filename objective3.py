@@ -2,6 +2,35 @@ import numpy as np
 import json 
 import matplotlib.pyplot as plt
 
+def dist_calc_2(points,slope,x0,y0):
+    l=1
+    m=slope
+
+    vector_array=np.array([[m],[-l]])
+    vector_norm_array=vector_array/((vector_array**2).sum())**0.5
+
+    point_given=(x0,y0)
+
+    distance=(points-point_given)@vector_norm_array
+
+
+    distance=np.abs(distance)
+    return distance.sum()
+
+def find_optimal_slope(points, x0, y0):
+    slopes = np.linspace(-10, 10, 10)  
+    min_distance = float('inf')
+    optimal_slope = None
+
+    for slope in slopes:
+        distance = dist_calc_2(points, slope, x0, y0)
+        if distance < min_distance:
+            min_distance = distance
+            optimal_slope = slope
+
+    return optimal_slope
+
+
 def dist(point,centroids):
     x,y = point
     min = 0
@@ -39,10 +68,20 @@ minx = min([x[0] for x in point])
 maxx = max([x[0] for x in point])
 miny = min([x[1] for x in point])
 maxy = max([x[1] for x in point])
+x0, y0 = 0, 0
+for a,b in point:
+    x0+=a
+    y0+=b
+x0/=len(point)
+y0/=len(point)
+slope = find_optimal_slope(np.array(point),x0,y0)
+graph_trend = slope/abs(slope)
 cluster = 7
 range_ = np.linspace(minx,maxx,cluster)
 cluster_count = []
-for i in zip(np.linspace(minx,maxx,cluster),np.linspace(maxy,miny,cluster)):
+p = maxy if graph_trend < 0 else miny
+q = maxy if p == miny else miny
+for i in zip(np.linspace(minx,maxx,cluster),np.linspace(p,q,cluster)):
     cluster_count.append(list(i))
 line_set = []
 print(cluster_count)
