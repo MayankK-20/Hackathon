@@ -11,10 +11,8 @@ Objective 1 : Focuses on setting the pipeline in the most efficient manner that 
 We used gradient descent to first find out an initial fit for the line which was then optimised by iteratively checking for the optimal shift and optimal slope from the current line.<br> <br>
 
 Objective 2 : Minimising the maximum distance of a house from the pipeline.<br>
-Approach 1:<br>
-In the code for Objective 1 we changed the condition from total distance to maximum distance from house.<br>
-Approach 2:<br>
-We can take a line then shift it towards the house with the maximum distance and keep on reducing the amount of shifts by which we get too a final line.<br> <br>
+Approach 1: In the code for Objective 1 we changed the condition from total distance to maximum distance from house.<br>
+Approach 2: We can take a line then shift it towards the house with the maximum distance and keep on reducing the amount of shifts by which we get too a final line.<br> <br>
 
 Objective 3 focused on finding multiple lines for the same problem.<br>
 Used clusterring to get k lines.<br>
