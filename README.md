@@ -14,5 +14,5 @@ We used gradient descent to first find out an initial fit for the line which was
 Approach 1: In the code for Objective 1 we changed the condition from total distance to maximum distance from house.<br>
 Approach 2: We can take a line then shift it towards the house with the maximum distance and keep on reducing the amount of shifts by which we get too a final line.<br> <br>
 
-<h2>Objective 3 </h2>Finding multiple lines that satisfy above conditions.<br><br>
-Used clusterring to get k lines.<br>
+<h2>Objective 3 </h2>Finding k lines that satisfy above conditions.<br><br>
+We used k-means clustering to create k groups of points, in which the points within each group were close enough to each other. Consequently, to find the slope and intercept of the line for each cluster from which the total distance of those points is minimized, we used orthogonal regression. <br>
