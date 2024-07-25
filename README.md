@@ -3,7 +3,7 @@
 Epoch 5 hackathon was a 24 hour hackathon held on 15th March. <br>Over 1000 teams registered for it.<br><br>
 <emphasis>
 
-<i>We placed in top 5 for problem statement 4. </i></emphasis>
+<i>We placed in top<b> 5</b> for problem statement 4. </i></emphasis>
 <br><br><br>***<br> <br> <br>
 The 4th problem is based on setting a cost efficient and fair pipeline through a given city (in this case city of california).<br> <br>
 
