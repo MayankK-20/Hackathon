@@ -7,7 +7,7 @@ Epoch 5 hackathon was a 24 hour hackathon held on 15th March. <br>Over 1000 team
 <br><br><br>***<br> <br> <br>
 The 4th problem is based on setting a cost efficient and fair pipeline through a given city (in this case city of california).<br> <br>
 
-Objective 1 : Focuses on setting the pipeline in the most efficient manner that is the least total distance of pipeline from all houses. <br><br>
+<h2>Objective 1 </h2> : Focuses on setting the pipeline in the most efficient manner that is the least total distance of pipeline from all houses. <br><br>
 We used gradient descent to first find out an initial fit for the line which was then optimised by iteratively checking for the optimal shift and optimal slope from the current line.<br> <br>
 
 Objective 2 : Minimising the maximum distance of a house from the pipeline.<br><br>
